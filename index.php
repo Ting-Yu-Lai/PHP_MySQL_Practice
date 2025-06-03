@@ -23,10 +23,6 @@
         a {
             text-decoration: none;
         }
-        button {
-            border:none;
-            background-color: transparent;
-        }
     </style>
 </head>
 
@@ -36,7 +32,7 @@
     <?php
     $dsn = "mysql:host=localhost;dbname=store;charset=utf8";
     $pdo = new PDO($dsn, 'root', '');
-    $items = $pdo->query("SELECT `name`,`price` FROM items")->fetchAll(PDO::FETCH_ASSOC);
+    $items = $pdo->query("SELECT `id`, `name`, `price` FROM items")->fetchAll(PDO::FETCH_ASSOC);
     ?>
     <table>
         <tr>
@@ -50,11 +46,7 @@
                 <td><?= $item['name'] ?></td>
                 <td>
                     <?= $item['price'] ?>
-                    <button type="button">
-                        <a href="./Edit_item_price.php">
-                            Edit
-                        </a>
-                    </button>
+                        <a href='./Edit_item_price.php?id=<?=$item['id'];?>'>Edit</a>
                 </td>
             </tr>
         <?php
