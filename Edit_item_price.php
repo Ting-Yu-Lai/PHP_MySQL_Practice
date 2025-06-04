@@ -24,15 +24,17 @@
         <label for="name">品項:</label>
         <input type="text" name="name" id="name" value="<?= $item['name']; ?>" required>
         <div></div>
-        <label for="name">品項:</label>
-        <input type="text" name="name" id="name" value="<?= $item['name']; ?>" required>
+        <label for="price">價格:</label>
+        <input type="text" name="price" id="price" value="<?= $item['price']; ?>" required>
         <div></div>
-        <label for="name">品項:</label>
-        <input type="text" name="name" id="name" value="<?= $item['name']; ?>" required>
+        <label for="stock">庫存:</label>
+        <input type="text" name="stock" id="stock" value="<?= $item['stock']; ?>" required>
         <div></div>
-        <label for="name">品項:</label>
-        <input type="text" name="name" id="name" value="<?= $item['name']; ?>" required>
+        <label for="cost">成本:</label>
+        <input type="text" name="cost" id="cost" value="<?= $item['cost']; ?>" required>
         <div></div>
+        <input type="hidden" name="id" value="<?= $item['id']?>">
+        <button type="submit">修改</button>
     </form>
 </body>
 
